@@ -1,5 +1,4 @@
 # 📚 Django Bookstore Application
-
 A complete e-commerce bookstore built with Django, MySQL, and Bootstrap. Features user authentication, shopping cart, book catalog, and admin dashboard.
 
 ## 📸 Screenshots
