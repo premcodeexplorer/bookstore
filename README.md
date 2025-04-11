@@ -8,6 +8,10 @@ A complete e-commerce bookstore built with Django, MySQL, and Bootstrap. Feature
 ![Screenshot 2025-04-11 021921](https://github.com/user-attachments/assets/e95c4574-32f4-4968-ad7d-3b92b3490e11)
 
 
+
+https://github.com/user-attachments/assets/0cf249b2-0353-4285-81c5-5ee40d18edc7
+
+
 ## ✨ Features
 
 - **User Authentication**: Login, logout, and registration system
