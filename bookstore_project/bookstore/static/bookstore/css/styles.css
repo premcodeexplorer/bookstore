@@ -1,0 +1,35 @@
+/* Custom styles for the bookstore */
+body {
+    background-color: #f8f9fa;
+}
+
+.card {
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+footer {
+    margin-top: 50px;
+}
+
+.alert {
+    margin-top: 20px;
+}
+
+.img-fluid {
+    max-height: 500px;
+    object-fit: cover;
+}
+
+.table {
+    margin-top: 20px;
+}

@@ -1,0 +1,53 @@
+{% extends 'bookstore/base.html' %}
+
+{% block title %}Your Shopping Cart{% endblock %}
+
+{% block content %}
+<h1 class="mb-4">Your Shopping Cart</h1>
+{% if cart_items %}
+<div class="table-responsive">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Book</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Total</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in cart_items %}
+            <tr>
+                <td>
+                    <a href="{% url 'book_detail' item.book.id %}">{{ item.book.title }}</a>
+                </td>
+                <td>${{ item.book.price }}</td>
+                <td>{{ item.quantity }}</td>
+                <td>${{ item.total_price }}</td>
+                <td>
+                    <a href="{% url 'remove_from_cart' item.id %}" class="btn btn-sm btn-danger">
+                        <i class="bi bi-trash"></i> Remove
+                    </a>
+                </td>
+            </tr>
+            {% endfor %}
+            <tr class="table-dark">
+                <td colspan="3"><strong>Total</strong></td>
+                <td colspan="2"><strong>${{ total }}</strong></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="text-end">
+    <a href="{% url 'home' %}" class="btn btn-outline-secondary">
+        <i class="bi bi-arrow-left"></i> Continue Shopping
+    </a>
+    <a href="#" class="btn btn-primary">Proceed to Checkout</a>
+</div>
+{% else %}
+<div class="alert alert-info">
+    Your cart is empty. <a href="{% url 'home' %}">Browse our books</a> to add items to your cart.
+</div>
+{% endif %}
+{% endblock %}
